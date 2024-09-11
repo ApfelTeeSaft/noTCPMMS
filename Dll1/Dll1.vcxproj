@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d72e8e54-6bc5-4935-b483-99143e831bac}</ProjectGuid>
+    <RootNamespace>Dll1</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;DLL1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;DLL1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;DLL1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;DLL1_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Array.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="rewindclient.h" />
+    <ClInclude Include="UnrealString.h" />
+    <ClInclude Include="util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CppSDK\SDK\AbilitiesPageTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AbilitiesPage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AccountBonuses_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AccountLinkingWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ActiveModifierItemHUD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ActiveModifiersHUD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ActiveModifiersPanelContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AIGoalManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AIModule_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AlterationsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AlterationWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AmbientControllerComponent_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnalyticsBlueprintLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AndroidPermission_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimGraphRuntime_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotifyState_AttachAsset_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotifyState_DisablePawnRotation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotifyState_DisableSteering_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotifyState_HolsterWeapon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotifyState_TeleportFinished_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_FootStep_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_MeleeAnimTrails_Off_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_MeleeAnimTrails_On_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayFeedbackLine_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayFireFX_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayForceFeedback_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayPlayerLandsWindEffect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayPlayerSwipeLeftWindEffect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayPlayerSwipeRightWindEffect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AnimNotify_PlayReloadFX_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announcement_Basic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announcement_Layout_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announcement_QuestUpdate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announcement_Tutorial_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announcement_ZoneModifiers_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_BackpackFull_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_BuildingDamaged_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_EventCine_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_Gen_Quest_Conversation_FrontEndRewards_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_Gen_Quest_Conversation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_HeadshotStreak_5x_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_LowDurability_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_LowHeath_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_NameHomeBase_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_NoDurability_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_OnboardingSatelliteCine_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_QuestUpdate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_TutorialConversation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Announce_ZoneModifiers_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AOE_Commando_KeepOutExplosion_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ArrowCursorWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AssetRegistry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaAerialFeedback_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaBannerSelectModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaBattlePassTrackerWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCompass_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCustomizationBannerButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCustomizationPickerTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCustomizationSlotButtonWrapper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCustomizationSlotButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaCustomizationTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaDirectAcquisitionMTXDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaDirectAcquisitionOfferDetailsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaDirectAcquisitionOfferPurchasedWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaDirectAcquisitionOfferWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaDirectAcquisitionScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaEquippedItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaEquipProgress_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaFPS_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaGameOverWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaGamePhaseChangeWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaGamePhaseWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaHitPointBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaHUDMenu_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaHUD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaInventoryDragDrop_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaInventoryDragVisual_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaInventoryEquipSlot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaInventoryFortItemTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaInventoryPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaKillFeedItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaKillFeedWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLeaderboardTabButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLeaderboardTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLobbyPlayerPanelActions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLobbyPlayerPanelDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLobbyPlayerPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLobby_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaLocalPlayerHitPointInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaMainStatTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaMatchmakingOptionsDisplay_v2_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaMatchmakingPlay_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaMatchStatsPartial_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaMatchStatsScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaNewsModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaNews_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaPickupManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaPlayerActionAlert_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaPlayerInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaPlayerLevel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaQuickbarPrimary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaQuickbarSecondary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaQuickBarSlot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaRotator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonBPTrackerSimpleWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonBPTrackerWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonLevelConfirmationModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonLevelFreeRewardsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonLevelHeaderWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonLevelPaidRewardsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonPageWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonReward_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSeasonTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSessionId_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaSpectatorHUD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaStatsRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaStatsTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTabsScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTalkingList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTeamInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTeamMemberDBNOState_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTeamMemberIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaTeamMemberInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaViewTargetHitPointBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AthenaViewTargetHitPointInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Athena_GameState_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Athena_Matchmaking_GameModeButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Athena_Matchmaking_SpecialEventButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Athena_PlayerController_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\AudioMixer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BadgesEarnedPanelContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BannerLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BannerSelectionWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Basic.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BasicGradientFill_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BasicInteractionWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BasicProgressBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BasicRatingWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BasicStrokeBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BlueprintContext_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Blueprint_Paper_VIM_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BluGloInventory_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BluGloManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BluGloRequestHandler_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BluGlow_MorphAnimation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BluGlo_Node_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BoostsRoot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BPI_StormShieldinterface_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_AnimNotify_CameraShake_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_BannerEditorTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_ExpeditionSquadSlotsView_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionBuildSquadWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionDetailsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionExpiresWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionIconTabButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionListItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionListView_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionMasterWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionOverviewWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionPickVehicleWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionReturnsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortExpeditionVehicleTileItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortLiveStreamGrantWindowExpires_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_FortniteLobbyLightSwitcher_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_CriticalMission_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_OutpostCC_7_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_OutpostCC_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_Outpost_Theater2_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_Outpost_Theater3_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_Outpost_Theater4_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Hex_PARENT_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_ItemTransform_TabButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_LiveStreamerDescription_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_LocalPlayerBannerEditor_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_LocalPlayerProfileManagement_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_LocalPlayerProfileModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_PlayerControllerOutpost_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_ProjectileTrajectory_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_QuestExpiresWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_SimpleItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_Soldier_Minigun_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BP_VictoryDrone_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BRCurrency_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BuildingBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BuildingInfoIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BuildWatermark_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\BulletWhipTrackerComponent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_AthenaAlwaysLoadedContentHack_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_CameraRainDrops_01_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_DtB_FloatingRift_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_DtB_LightningZap_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Fragment_Container_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_GoinCommandoWeapon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_IngameMap_SceneCaptureBlurryNew_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_IngameMap_SceneCaptureNew_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Melee_Generic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Pickups_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_PlayerHealthDamage_CameraLensEffect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_PlayerShieldDamage_CameraLensEffect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Athena_Grenade_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Bullet_Sniper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Commando_FragGrenade_Cluster_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Commando_FragGrenade_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Pumpkin_RPG_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Ranged_GrenadeLauncher_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Ranged_GrenadeLauncher_Snowball_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Prj_Ranged_Rocket_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Proj_Athena_Bandage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Ranged_Generic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_Rift_Portals_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\B_StockBattleBus_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Car_Copper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ChangeSubgameButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ChatWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CheckExpeditionRewardsAction_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CheckFrontEndDailyRewardsAction_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CheckFrontEndRewardsAction_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CheckRateExperienceAction_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ChoiceCardCount_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ChoiceCardName_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CinematicCamera_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CinematicMinusTeamMics_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Cinematic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBarTopIcon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookItemPicker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookPageCompletionRewardWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookPageDetailsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookPageListWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookPrimaryPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookProgressWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookRewardCardWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookSectionPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookSectionRewardWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookSectionTileRewardWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookSectionTileWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookSlotView_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionBookWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CollectionMultiProgressBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ColorLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CombatManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Combined_Horde_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ComingSoonPlaceholderWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CommonUI_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ConfirmationWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ConsoleProfileWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CraftingIngredient_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Credits_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\CustomMatchmakingKeyModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyQuestObjectiveEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyQuestProgressWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyQuestsPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyQuestWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewardsCurrent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewardsEpic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewardsItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewardsMissingFoundersPack_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewardsSchedule_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DailyRewards_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DayWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DeathWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DefaultObjectiveContentWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DefaultSkillNode_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DefenderAnimBlueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DONOTUSE_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\DuplicateResOutMesh_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EarnedBadgeTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EliminatedOverlay_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EnemyPawn_Interface_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EnemyPawn_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Engine_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EpicCMSUIFramework_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EpicGameplayStatsRuntime_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EquippedItemMinusBandolier_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EquippedItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ErrorEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ErrorWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EulaTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EulaWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\EventStoreHostPanels_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ExpeditionSquadSlotButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FeedbackManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Feedback_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Feedback_RateExperience_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Female_Commando_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Foliage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortHeroSupportPerkWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortniteGame_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortnitePartyBackdrop_Camera_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortnitePartyHeroSelect_Camera_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortniteUI_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Fortnite_M_Avg_Player_AnimBlueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FortTwitchLogin_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Fort_Entry_Music_Controller_BP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FriendCodeConsole_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FriendCodePC_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FriendNotification_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontendCamera_Inspect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontendCamera_Main_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontendCamera_Manage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_ChoiceRewards_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_Conversation_VO_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_CurrentReward_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_EpicQuest_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_Expedition_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_ListRewards_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_Queue_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewards_Widget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndRewardWrapperWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEndSettingsBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FrontEnd_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Frontend_Lobby_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FullPartyBarAthena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FullPartyBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FullPartyMemberAthena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FullPartyMemberConnected_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\FullPartyMember_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_MED_ASN_Kumiko_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_MED_ASN_Sarah_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_MED_BLK_Red_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_MED_CAU_Armstrong_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_Med_Head_01_Skeleton_AnimBlueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\F_Med_Soldier_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_AthenaDBNORevive_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_AthenaDBNO_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_Emote_Generic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_GenericApplyKnockback_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_GenericDeath_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_GenericStunned_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_Melee_GenericCombo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_Melee_Generic_EventGraph_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_PlayerDBNOResurrect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAB_PlayerDBNO_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GamepadMappingInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GameplayAbilities_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GameplayTags_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GameplayTasks_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAT_ActiveAbility_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAT_Athena_Bush_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAT_Athena_PurpleStuff_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAT_CommandoActiveAbility_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GAT_TriggeredAbility_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Bandage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Bush_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Grenade_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Grenade_WithTrajectory_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Medkit_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_PurpleStuff_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Athena_Shields_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Commando_FragGrenade_WithTrajectory_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DanceGrenade_Stun_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_BuildingCreated_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_BuildingRepaired_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_Consumable_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_Death_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_InteractSearch_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_InteractUse_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_DefaultPlayer_Stunned_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Default_KilledEnemy_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_TrapBuildGeneric_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_TrapGeneric_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Trap_FloorJumpPadDirectional_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Trap_FloorJumpPad_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GA_Trap_WallElectric_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_Enemy_Frozen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_Fury_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_MaxHealthIncrease_Major_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnDmgCorrosion_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnDmgReceived_Slow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnDmgVulnerabilityStacking_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnDmgVulnerability_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnDmg_SpeedBuff_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnLowHealth_Berzerker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_OnLowHealth_Enrage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_ReflectDamage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_GM_Snare_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_PurpleStuff_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNL_Taker_TRV_DaytimeVulnerability_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNStatic_MantisStrike_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNS_GM_OnDeathAreaHeal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNS_GM_OnDisplayEmoji_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNS_GM_OnDmgLifeLeech_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNS_GM_OnPreviewEmoji_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCNS_GM_PlayerOnDmgLifeLeech_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_Athena_Backpack_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_Athena_Bush_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_Athena_DanceStun_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_BluGloPylon_BuildSpeed_Activate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_BluGloPylon_Energy_Activate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_BluGloPylon_Health_Activate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_BluGloPylon_RunSpeed_Activate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_BluGloPylon_Shield_Activate_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_Commando_IncendiaryRoundsDOT_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_MiniBoss_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_RiftStaminaDrain_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_RiftZapPlayer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GCN_TakerMarkedForDeath_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GC_NS_OnDmgDmgPulse_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\GeometryCache_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HBOnboardingFlow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeadMountedDisplay_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HealthWarningWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HelpWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroesCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroNotificationHandler_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroSquadBonusesDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroSquadBonuses_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroSquadBonus_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroSquadManagementScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HeroSquadSlotsView_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HexmapLevelSettings_Temperate01_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HitPointBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HomeScreenQuestRewardItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HordeTierResultsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HordeWaveAlertWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HordeWaveModifiersTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HordeWaveModifiersWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HorizontalTabList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Hotfix_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HUDMinusPickupItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HUDMinusTeamMemberInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HUD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\HUD_TeamInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\IconAndNameWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\IconTabButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\IconTextButtonReversed_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\IconTextButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ImpactNumbers_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InfoEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InfoWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InputReflector_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InteractionIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Interaction_DefenderBeacon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InterestIndicatorWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\InterfacePlayerPawn_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemAlterationsListDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemAttributesDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCalledOutAttributesDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCountOverCost_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCountRecycling_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCount_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCraftingIngredientListEntryHaveNeedVerbose_BLACK_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCraftingIngredientListEntryHaveNeedVerbose_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCraftingIngredientListEntryHaveNeed_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCraftingIngredientList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemCraftingIngredientsDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDescriptionDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDetailsHeaderItemDisplayText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDetailsHeaderRarityTypeText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDetailsHeaderTagListText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDetailsHeader_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDetailsStackCounter_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemDragIcon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemIconWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectCycleWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolutionChoiceEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolutionConfirmation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolutionIngredientsEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolutionIngredientsList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolveRarityConfirmation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectEvolveRarityIngredientsList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectUpgradeCallout_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemInspectUpgradeConfirmation_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementCompareModeBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementDetailsModeBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementEquipSlot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementFocusSwitcher_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementInventoryLimitStatusIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementInventoryPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementItemTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementItemTilePopupMenu_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementModeDetailsPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementMulchConfirmationDialogContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementMulchDetailsPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementMulchModeBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemManagementScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemOrWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemPerksListDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemRatingIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemStackCounter_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformConfirmationModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformItemPicker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformKeyInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformKeyPickerTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformKeyPicker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformKeyScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformRequiredItems_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformResultInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformResultItems_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformResultModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformSlotEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformSlotItemPickerTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransformSlotScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemTransform_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemUIFunctionLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ItemWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\JoinServer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\JournalQuestDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\JournalQuestProgressBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\JournalQuestRewardDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\KeybindWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\KillerPortraitWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Landscape_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LeaderboardHeaderRowWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LeaderboardListView_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LeaderboardRowWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LeaderboardThrobber_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LeaveButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LegacyBasicGradientFill_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LegacyButtonIconText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LegacyRatingWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LegalInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LevelSequence_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Lightbox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LightningLSystem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyGadgetButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyPlayerAddPlayer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyPlayerPadBottom_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyPlayerPadGadgets_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyPlayerPadTop_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LobbyTimer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Lobby_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LocalPlayerHitPointInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LoginAccountSelect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LoginCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LoginResultWIdget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\LoginScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MainMenu_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MainModeItemDetailsHostPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MainTabIconButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MainTabsScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MainTabTutorialBangWrapper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MatchStatsGrid_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\McpProfileSys_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MediaAssets_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MenuScreen_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MenuScreen_Commando_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MessageCenterListItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MessageCenterWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MgmtTabsScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MicIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MinibossDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiniCraftingIngredientListEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiniCraftingIngredientList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiniItemCraftingIngredientsDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiniPartyBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiniPartyMember_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MiscellaneousModeItemDetailsHostPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionAlertIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionBlueprintFunctionLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionDetailsModifierList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionDetailsModifierRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionFocusWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionModifierItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionObjectiveContentWidgetInterface_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionObjectiveProgressBarsManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionObjectiveProgress_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionObjectiveWidgetProviderInterface_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionOverviewObjective_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionPanelContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionRewardItemMinusTooltip_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionRichText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionTooltip_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionTrackerEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionTrackerSubEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MissionTracker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MonolithicItemDetailsHostPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MOTD_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MovieSceneCapture_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MovieScene_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MovieWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MRMesh_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MTXButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MulchConfirmationItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MulchRefundItemQuantityListEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MulchRefundItemQuantityList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\MusicManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_ASN_Jae_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_BLK_Sydney_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_Commando_Head_Cowl__Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_Commando_Head_HW01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_Commando_UltraRare_01_Body_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_Commando_UltraRare_01_Head_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\M_MED_HIS_Sparks_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NearestPlayerContext_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NetDebugContainer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NetUI_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NewsEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\News_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NodeBackground_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\NormalBangWrapper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ObjectivesPage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OnlineSubsystemTencent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OnlineSubsystemUtils_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OnlineSubsystem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenuHudRotator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenuInput_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenuRowSelector_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenuSlider_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenuSlider_Light_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OptionsMenu_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OutpostScreenCanEditPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OutpostScreenCanEditRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OutpostScreenStormShieldContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OutpostScreenStormShieldPermissions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\OutpostScreenStormShield_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PackResource_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PanelButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Parent_BuildingPropActor_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Parent_Tree_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PartyCharacterPlacementHelper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PartyDisplayManagerBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PartyFinderListItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PartyFinder_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Party_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PBWA_S1_Solid_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PBWA_W1_QuarterWallS_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PBW_BP_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PerksList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PerkTierWidgetNew_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PerkWidgetNew_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PerkWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PermissionsRoot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PhysXVehicles_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PickupManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PickupMessageItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PinnedSchematicItemsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PinnedSchematicItemWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerBanner_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerChoiceButtonWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerChoiceWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerEmblemAndXp_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerInfo_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Athena_Generic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Athena_Generic_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Commando_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Generic_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerPawn_Generic_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerRankEmblem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerSpawnPlacementActor_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PlayerZoneTeamScoreContributionWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PopupCenterMessageModalPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PopupCenterMessageWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PotentialResourceWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PowerRequirement_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PowerToastWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PowerWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas2_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas3_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas4_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas5_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas6_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PresentXmas_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PrimaryHeroActiveAbilitiesListDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PrivacyWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ProgressModalWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ProgressWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ProjectileHuskRanged_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\PurchaseFlow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Qos_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuantitySelector_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestInfo_BulletListEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestInfo_BulletList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestInfo_Widget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestObjectiveEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestProgressWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestsCountIconTabButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestsModal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTalkingHeadWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTrackerEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTrackerMainQuestList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTrackerSubEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTrackerTrackedQuestsList_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestTreeEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestUpdateEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuestUpdatesLog_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuickbarBase_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuickbarPrimary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuickbarSecondary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuickbarSlotCooldown_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\QuickbarSlot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RadialPickerItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RadialPicker_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RatingWidget_NUI_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RejoinWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RenderToTextureFunctionLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ResourceAggregationWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_BadgeLootBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_BadgeLoot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_Badge_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_BonusXpType_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_CommanderXPBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_CommanderXP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_NameplateWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_PlayerScoreBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_PlayerScoreRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_StatsSubtypeBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_SummaryBadge_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_Summary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeamScoreBox_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeamScoreRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeamScore_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeamSubtotalScore_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeamTotalScore_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeleportPadPlayerTop_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeleportPadPlayer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TeleportPad_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_TopPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Results_Widget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ReticleStatusWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RewardInfoButtonWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RewardInfoSimpleWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RewardsIcon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RewardsListEntry_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RewardsListWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Rewards_Header_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Rewards_ItemCard_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RotatingStarburstWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\RotatorSelector_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScoreBadgeProviderMission_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScoreBarsScoreMessageItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScoreBarsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScoreDetailsRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScoreMessageNumber_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ScrollingTextButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ShowFriendCodesSelection_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SignInWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SimpleSquadSlotButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SkillTreeBPLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SkillTreeColorSetup_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SK_M_MED_Head_01_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SK_M_Med_Soldier_04_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SK_PickAxe_Jaws_Skeleton_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SlateContentCalloutMenu_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SmallLevelUpReward_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SM_IceCube_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SpecialEventsCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SpeechBubbleWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SplashScreenWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SquadSlotDetailsPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SquadSlotGroup_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SquadSlotItemPickerTileButton_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SquadStatsWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatItemLarge_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatNumericTextBlock_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatsListItemWIdget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatsListWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatsModeItemDetailsHostPanel_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StatusWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StickyNotification_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreCardReveal_BP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreCardReveal_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreItemCardFront_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreMain_MTXOffer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreMain_OfferDetailsAttribute_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreMain_OfferDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreMain_Root_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StorePinataMaster_BP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StorePinataMaster_Parent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StoreWeaponMaster_BP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\StyleLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SubgameSelectScreen_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SubgameSelect_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SubtitlesWidgets_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Subtitles_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SupportHeroSquadBonusesDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SurvivorRescuedCounter_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SurvivorSquadBonusTraitsDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\SurvivorTraitsDetailWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\S_Stream_2W_SBend_3L_a_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T1_Main_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T1_Research_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T2_Horde_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T2_Main_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T2_Research_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T3_Horde_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T3_Main_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T3_Research_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T4_Horde_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T4_Main_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\T4_Research_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabAccountLinkage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabAudioOptions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabBrightnessOptions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabGameOptionsHud_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabGameOptionsMain_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabGameOptions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabGamePadConfig_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabInputOptions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabRevealMeassage_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TabVideoOptions_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TalkingHeadWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TeamMemberBluGloIndicator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TeamMicStack_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TeamScoreDetailsContent_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TeamScoreToPlayerXPRewardWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TextRotator_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TheaterCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TheaterMapViewer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ThirdPartyTab_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ThreatPostProcessManagerAndParticleBlueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Threat_RainAttachedToPlayer_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ThrowingStarTest_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ToastDisplayArea_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ToastWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TODM_A_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TODM_Disabled_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipLibrary_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipMinusBasicMinusS_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipMinusBasicMultiLineMinusS_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipMinusCoreStat_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipMinusCustomMinusS_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TooltipStatWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TopBarSkillPoints_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TopBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TracerGeneric_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Ceiling_ElectricWeak_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Ceiling_Spikes_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Floor_Player_Jump_Free_Direction_Pad_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Floor_Player_Jump_Pad_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Floor_Player_Launch_Pad_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Floor_Spikes_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Wall_Electric_Athena_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Trap_Wall_Spikes_Metal_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\Tree_Pine_01_Christmas_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TT_Commando_FragGrenade_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TutorialOverlay_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TutorialRichText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TutorialTransparentRichText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TutorialWindow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TVPostProcessBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TwitchLoginModalWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\TwitchNotification_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UACCommon_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UIManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UIMapManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UMG_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UseableWeaponsObject_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\UsedPlacementActorsContext_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VaultCamera_Blueprint_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VaultCharacterLightingBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VaultCharacterPlacementHelper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VaultWeaponPlacementHelper_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VinderTech_GliderChute_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\VinderTech_Umbrella_AnimBP_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WaveModifiersTile_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WaveModifiersWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WeakSpot_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WebPurchase_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WindManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WM_Camera_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WM_Lights_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\WM_PinManager_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBarToolTip_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBarXpText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBar_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBonusToolTip_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoostCounts_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoostDailyBonus_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoostInfoText_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoostQuantities_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoostRow_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpBoosts_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpMatchProgression_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpReasonFeedItem_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\XpReasonFeed_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ZoneDayCompletion_ScoreBlock_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ZoneDetails_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\ZoneScoreWidget_functions.cpp" />
+    <ClCompile Include="..\CppSDK\SDK\_WaterMeshBlueprintMaster_functions.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="inc.h" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
