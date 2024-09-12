@@ -31,14 +31,9 @@ static void StartRewindClient() {
 
     std::string binary_representation;
     int shift = 1;
-    std::string PlayerName = PlayerState->GetPlayerName().ToString();
-
-    if (PlayerName != "" && PlayerState && PlayerController) {
-        std::cout << "Most likely found playername: " << PlayerName << std::endl;
-    }
-    else {
-        std::cout << "Missing required info, Controller, PlayerState or PlayerName might be missing or giving a incorrect resonse" << std::endl;
-    }
+    SDK::FString PlayerName = PlayerState->GetPlayerName();
+    const TCHAR* TCHARPlayerName = PlayerName.CStr();
+    std::cout << "Most likely found playername: " << PlayerName << std::endl;
 }
 
 void (*oProcessEvent)(SDK::UObject* Object, SDK::UFunction* Function, void* Parameters);
