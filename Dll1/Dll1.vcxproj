@@ -131,6 +131,7 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)/websocketpp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -138,11 +139,14 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libboost_system-vc143-mt-x32-1_86.lib;libboost_thread-vc143-mt-x32-1_86.lib;libboost_filesystem-vc143-mt-x32-1_86.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="Gameplay.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="rewindclient.h" />
     <ClInclude Include="UnrealString.h" />
