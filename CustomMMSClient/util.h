@@ -24,16 +24,19 @@ static void StartRewindClient() {
     RewindClientOnline = true;
 
 
-    auto PlayerController = SDK::UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
-    std::cout << "found controller" << std::endl;
-    auto PlayerState = PlayerController->PlayerState;
-    std::cout << "found playerstate" << std::endl;
-
     std::string binary_representation;
     int shift = 1;
-    SDK::FString PlayerName = PlayerState->GetPlayerName();
-    const TCHAR* TCHARPlayerName = PlayerName.CStr();
-    std::cout << "Most likely found playername: " << PlayerName << std::endl;
+    if (GetAsyncKeyState(VK_F3) & 0x01)
+    {
+        auto PlayerController = SDK::UWorld::GetWorld()->OwningGameInstance->LocalPlayers[0]->PlayerController;
+        std::cout << "found controller" << std::endl;
+        auto PlayerState = PlayerController->PlayerState;
+        std::cout << "found playerstate" << std::endl;
+        SDK::FString PlayerName = PlayerState->GetPlayerName();
+        const TCHAR* TCHARPlayerName = PlayerName.CStr();
+        std::cout << "Most likely found tcharPlayerName: " << TCHARPlayerName << std::endl;
+        std::cout << "Most likely found PlayerName:" << PlayerName << std::endl;
+    }
 }
 
 void (*oProcessEvent)(SDK::UObject* Object, SDK::UFunction* Function, void* Parameters);
