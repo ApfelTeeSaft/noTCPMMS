@@ -5,14 +5,14 @@
         {
             "primary-output": "x64\\Release\\inc.h.obj",
             "outputs": [
-                "C:\\Users\\Kenji\\Documents\\GitHub\\RewindClient\\RewindClientDll\\Dll1\\Dll1\\x64\\Release\\vc143.pdb",
+                "C:\\Users\\h07he\\Documents\\GitHub\\noTCPMMS\\Dll1\\x64\\Release\\vc143.pdb",
                 "x64\\Release\\",
-                "C:\\Users\\Kenji\\Documents\\GitHub\\RewindClient\\RewindClientDll\\Dll1\\Dll1\\x64\\Release\\inc.h.ifc"
+                "C:\\Users\\h07he\\Documents\\GitHub\\noTCPMMS\\Dll1\\x64\\Release\\inc.h.ifc"
             ],
             "provides": [
                 {
                     "logical-name": "inc.h",
-                    "source-path": "c:\\users\\kenji\\documents\\github\\rewindclient\\rewindclientdll\\dll1\\dll1\\inc.h",
+                    "source-path": "c:\\users\\h07he\\documents\\github\\notcpmms\\dll1\\inc.h",
                     "lookup-method": "absolute"
                 }
             ],

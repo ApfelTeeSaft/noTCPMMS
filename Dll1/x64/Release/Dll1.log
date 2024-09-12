@@ -1,8 +1,16 @@
 ﻿  Scanning sources for module dependencies...
-  dllmain.cpp
-  Generating code
-  9 of 237 functions ( 3.8%) were compiled, the rest were copied from previous compilation.
-    5 functions were new in current compilation
-    17 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Dll1.vcxproj -> C:\Users\Kenji\Documents\GitHub\RewindClient\RewindClientDll\Dll1\x64\Release\Dll1.dll
+  inc.h
+  Compiling...
+  inc.h
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018: The "MultiToolTask" task failed unexpectedly.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018: System.IO.IOException: The process cannot access the file 'C:\Users\h07he\Documents\GitHub\noTCPMMS\Dll1\x64\Release\Dll1.tlog\Microsoft.Build.CPPTasks.CL.read.1.tlog' because it is being used by another process.
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.StreamWriter.CreateFile(String path, Boolean append, Boolean checkHost)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.StreamWriter..ctor(String path, Boolean append, Encoding encoding, Int32 bufferSize, Boolean checkHost)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at System.IO.File.InternalWriteAllText(String path, String contents, Encoding encoding, Boolean checkHost)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at Microsoft.Build.Utilities.CanonicalTrackedInputFiles.SaveTlog(DependencyFilter includeInTLog)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at Microsoft.Build.CPPTasks.TrackedVCToolTask.PostExecuteTool(Int32 exitCode)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at Microsoft.Build.CPPTasks.MultiToolTask.FinishBuild(Int32 exitCode)
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(562,5): error MSB4018:    at Microsoft.Build.BackEnd.TaskExecutionHost.Cancel()
