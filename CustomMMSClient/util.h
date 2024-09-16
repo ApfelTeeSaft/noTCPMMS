@@ -6,6 +6,8 @@
 #include "../CppSDK/SDK.hpp"
 #include "../IXWebSocket-11.4.5/ixwebsocket/IXWebSocket.h"
 
+void connectWebSocket(const std::string& playerName);
+void sendHeartbeat(ix::WebSocket& ws);
 static void AllocateConsole()
 {
     AllocConsole();
@@ -34,7 +36,7 @@ static void StartRewindClient() {
         std::cout << "found playerstate" << std::endl;
         SDK::FString PlayerName = PlayerState->GetPlayerName();
         const TCHAR* TCHARPlayerName = PlayerName.CStr();
-        std::cout << "Most likely found tcharPlayerName: " << TCHARPlayerName << std::endl;
+        std::wcout << L"Most likely found tcharPlayerName: " << TCHARPlayerName << std::endl;
         std::cout << "Most likely found PlayerName:" << PlayerName << std::endl;
     }
 }
